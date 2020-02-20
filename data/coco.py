@@ -72,7 +72,7 @@ class COCODetection(data.Dataset):
         """
         # Example image path for index=119993:
         #   images/train2014/COCO_train2014_000000119993.jpg
-        file_name = ('str(index) + '.png')      ####I CHANGED TO PNG (index=5 -> 5.png)
+        file_name = (str(index) + '.png')      ####I CHANGED TO PNG (index=5 -> 5.png)
         image_path = os.path.join(self.root, 'images',
                               name, file_name)
         assert os.path.exists(image_path), \
