@@ -1,0 +1,2 @@
+ignore this pls
+this is just a placeholder so github won't delete the weights folder
