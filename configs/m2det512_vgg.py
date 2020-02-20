@@ -74,4 +74,4 @@ dataset = dict(
 import os
 home = os.path.expanduser("~")
 VOCroot = os.path.join(home,"data/VOCdevkit/")
-COCOroot = os.path.join("/contentn/unzipped_dset/nodist_COCO/data/COCO/")   #######CHANGE THIS
+COCOroot = os.path.join("/content/unzipped_dset/nodist_COCO/data/COCO/")   #######CHANGE THIS
