@@ -36,7 +36,7 @@ class COCODetection(data.Dataset):
         self.ids = list()
         self.annotations = list()
         self._view_map = {
-            'minival2014' : 'val2014',          # 5k val2014 subset
+            'minival2014' : 'val2017',          # 5k val2014 subset
             'valminusminival2014' : 'val2014',  # val2014 \setminus minival2014
             'test-dev2015' : 'test2015',
         }
@@ -72,8 +72,7 @@ class COCODetection(data.Dataset):
         """
         # Example image path for index=119993:
         #   images/train2014/COCO_train2014_000000119993.jpg
-        file_name = ('COCO_' + name + '_' +
-                     str(index).zfill(12) + '.jpg')
+        file_name = ('str(index) + '.png')      ####I CHANGED TO PNG (index=5 -> 5.png)
         image_path = os.path.join(self.root, 'images',
                               name, file_name)
         assert os.path.exists(image_path), \
