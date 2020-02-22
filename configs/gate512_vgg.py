@@ -66,8 +66,7 @@ dataset = dict(
         ),
     COCO = dict(
         train_sets = [('2017', 'train')],
-        eval_sets = [('2014', 'minival')],
-        test_sets = [('2015', 'test-dev')],
+        eval_sets = [('2017', 'val')],  ##I CHANGED THIS
         )
     )
 
