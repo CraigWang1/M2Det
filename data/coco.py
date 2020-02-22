@@ -95,6 +95,8 @@ class COCODetection(data.Dataset):
                 roidb = pickle.load(fid)
             print('{} gt roidb loaded from {}'.format(coco_name,cache_file))
             return roidb
+        if not os.path.exists(os.path.dirname(cache_file)):
+            os.makedirs(os.path.dirname(cache_file))  #makes the directory, if it doesn't exist
 
         gt_roidb = [self._annotation_from_index(index, _COCO)
                     for index in indexes]
