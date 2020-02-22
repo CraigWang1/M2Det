@@ -141,9 +141,12 @@ while True:
 
     loop_time = time.time() - loop_start
     allboxes = np.array(allboxes)
-    boxes = allboxes[:,:4]
-    scores = allboxes[:,4]
-    cls_inds = allboxes[:,5]
+    try:
+        boxes = allboxes[:,:4]
+        scores = allboxes[:,4]
+        cls_inds = allboxes[:,5]
+    except:
+        continue
     print('\n'.join(['pos:{}, ids:{}, score:{:.3f}'.format('(%.1f,%.1f,%.1f,%.1f)' % (o[0],o[1],o[2],o[3]) \
             ,labels[int(oo)],ooo) for o,oo,ooo in zip(boxes,cls_inds,scores)]))
     fps = 1.0 / float(loop_time) if cam >= 0 or video else -1
